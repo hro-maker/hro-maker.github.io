@@ -193,6 +193,7 @@ a {
   position: absolute;
   top: 120px;
   right: 269px;
+  transition: 2s all;
 }
 .container__life-left {
   display: flex;
@@ -658,3 +659,80 @@ h2.signup__title {
   top: 70px;
   right: 778px;
 }
+@media (max-width:1500px) {
+  .container_1-title{
+      font-size: 30px;
+      transform: translateX(200px);
+  }
+    .container__life-right-img{
+      width: 300px;
+      height: 400px;
+      transition: 2s all;
+      transform: translateY(-70px)translateX(200px);
+    }
+    .container__life-right-img:hover{
+      transform:scale(2);
+    }
+}
+@media (max-width:1300px) {
+  .container_1-title{
+      font-size: 30px;
+      transform: translateX(200px);
+  }
+  .container__life-right-img{
+    width: 200px;
+    height: 200px;
+  }
+  
+}
+@media (max-width:900px){
+  .container__life-title-left{
+    font-size: 20px;
+  }
+  }
+@media (max-width:800px){
+  .btn-life{
+    transform:translateY(70px) translateX(-250px) ;
+  }
+  .container__life-right-img:hover{
+    transform: translateY(20px)translateX(220px)  scale(1.3);
+  }
+  .container__life-title-left{
+    font-size: 15px;
+    transform: translateX(-180px);
+    line-height: 20px;
+    width: 200px;
+  }
+  .container__life-description-left{
+    transform: translateY(40px) translateX(-250px);
+  }
+  .header__links-item{
+    position: static;
+    margin-left: 20px;
+    margin-top: 30px;
+    transform: translateY(40px);
+  }
+  .container_1-subtitle{
+    font-size: 15px;
+    text-overflow: ellipsis;
+    width: 250px;
+    position: absolute;
+    left: 35%;
+    
+    transform: translateY(-20px);
+  }
+}
+@media (max-width:500px){
+  .container_1-subtitle{
+    left: 20%;
+  }
+  
+  .container_1-title{
+    font-size: 20px;
+    transform: translateX(220px);
+}
+.container__life-description-left{
+  width: 280px;
+}
+}
+
