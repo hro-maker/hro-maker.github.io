@@ -1,0 +1,12 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 11" width="11" height="11">
+	<title>section_1</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.702;fill: #ffffff } 
+	</style>
+	<g id="section_1">
+		<g id="scroll_1">
+			<path id="Shape 11" class="shp0" d="M11 7L7 7L7 11L4 11L4 7L0 7L0 4L4 4L4 0L7 0L7 4L11 4L11 7Z" />
+		</g>
+	</g>
+</svg>
