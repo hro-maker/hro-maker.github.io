@@ -6,6 +6,16 @@
   outline: none;
   list-style: none;
 }
+@import url('http://fonts.cdnfonts.com/css/asap');
+@import url('http://fonts.cdnfonts.com/css/segoe-pro');
+@font-face {
+  font-family: 'Segoe WP';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Segoe WP'),
+  url('https://fonts.cdnfonts.com/s/13139/SegoeWP.woff%27') 
+  format('woff');
+}
 /* fonts start */
 @font-face {
   font-family: "Open Sans";
@@ -39,31 +49,12 @@
   font-style: italic;
 }
 @font-face {
-  font-family: "Segoe WP";
-  src: url(./assets/fonts/segeo/SegoeWPN.ttf);
-}
-@font-face {
-  font-family: "Asap";
-  src: url(./assets/fonts/asap/Asap-Bold.otf);
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Asap";
-  src: url(./assets/fonts/asap/Asap-Regular.otf);
-  font-weight: regular;
-}
-@font-face {
-  font-family: "Asap";
-  src: url(./assets/fonts/asap/Asap-Medium.otf);
-  font-weight: medium;
+  font-family: "PT Sans";
+  src: url(./assets/fonts/pt/PTC55F.ttf);
 }
 @font-face {
   font-family: "Segoe UI";
   src: url(./assets/fonts/segeo/segoe-wp-light.ttf);
-}
-@font-face {
-  font-family: "PT Sans";
-  src: url(./assets/fonts/pt/PTC55F.ttf);
 }
 /* fonts end*/
 /* header start */
@@ -74,12 +65,12 @@ a {
 .wrapper {
   width: 100%;
   min-height: 100%;
+  position: relative;
 }
 .section {
   width: 100%;
 }
 .section_1 {
-  /* @todo - height change */
   position: relative;
   height: 566px;
   background: url(./assets/1back.png) center center/cover no-repeat;
@@ -90,6 +81,7 @@ a {
   top: 29px;
   left: 0;
   right: 0;
+  z-index: 2222;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -297,12 +289,15 @@ progress::-webkit-progress-value {
 .video__controls-volume:hover input[type="range"] {
   display: block;
 }
+h1{
+  font-weight: normal;
+}
 .main__title {
   font-size: 63px;
   letter-spacing: 1px;
   color: #f5c506;
-  font-weight: 400;
-  font-family: "Asap";
+  font-weight: normal;
+  font-family: "Asap",sans-serif;
   text-align: center;
   text-transform: uppercase;
   position: absolute;
@@ -344,10 +339,11 @@ progress::-webkit-progress-value {
   width: 100%;
   display: flex;
   justify-content: center;
-  /* box-shadow: 5px 2px 18px 23px rgba(0, 0, 0, 0.89); */
-  box-shadow: 0px -3px 17px 3px rgba(0,0,0,0.75);
-
+  box-shadow: 0px -3px 17px 3px rgba(0,0,0,1);
+  
   z-index: 22;
+  /* margin: 10px 0; */
+  margin-bottom: 2px;
 }
 .advertising {
   height: 100%;
@@ -385,7 +381,7 @@ progress::-webkit-progress-value {
   font-size: 27px;
   letter-spacing: 0px;
   color: #000000;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: uppercase;
   font-family: "Segoe UI";
   text-align: center;
@@ -479,8 +475,8 @@ progress::-webkit-progress-value {
   letter-spacing: 0px;
   line-height: 38px;
   color: #ffffff;
-  font-weight: 200;
-  font-family: "Segoe UI";
+  font-weight: 500;
+  font-family: 'Segoe UI';
 }
 .lorem__blocks-item1,
 .lorem__blocks-item3 {
@@ -556,6 +552,7 @@ input[type="range"].lorem_range {
   height: 16px;
   -webkit-appearance: none;
   width: 68%;
+  border-radius: 5px;
 }
 input[type="range"].lorem_range:focus {
   outline: none;
@@ -566,7 +563,7 @@ input[type="range"].lorem_range::-webkit-slider-runnable-track {
   cursor: pointer;
   animate: 0.2s;
   background: #fae696;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 input[type="range"].lorem_range::-webkit-slider-thumb {
   height: 100%;
@@ -576,6 +573,7 @@ input[type="range"].lorem_range::-webkit-slider-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: 0px;
+  
 }
 .lorem_range {
   position: absolute;
@@ -587,7 +585,6 @@ input[type="range"].lorem_range::-webkit-slider-thumb {
 }
 .section_4 {
   background-color: #4c4c4c;
-  /* position: relative; */
 }
 .reclam__title {
   width: 100%;
@@ -686,6 +683,7 @@ footer {
   flex-direction: column;
   gap: 13px;
 }
+
 .lorem__message{
   position: relative;
   width: 284px;
@@ -736,12 +734,7 @@ cursor: pointer;
   transform: rotate(170deg) skewX(11deg);
   
 }
-.video__controls-playBig-lorem{
-  left: 30.6%;
-    top: 38.6%;
-    width: 21.37%;
-    height: 26.74%;
-}
+
 .lorem__down-block1>img{
   transition: 2s all;
 }
@@ -752,12 +745,24 @@ cursor: pointer;
   background-image: linear-gradient(0deg, #b18734 0%, #694908 100%);
   color:black;
 }
+.reclam__container{
+  gap: 80px;
+}
+.lorem__message-color{
+  background-color: #FCEEB5;
+}
 @media (min-width: 820px) {
   .lorem__down-block{
     display: none;
   }
 }
 @media (max-width: 1240px) {
+  .video__controls-playBig-lorem{
+      left: 30.6%;
+      top: 38.6%;
+      width: 21.37%;
+      height: 26.74%;
+  }
   .lorem__blocks-item {
     width: 34%;
   }
@@ -787,6 +792,7 @@ cursor: pointer;
     overflow: hidden;
     padding-bottom: 7%;
   }
+  
   .reclam__title{
     font-size: 39px;
   }
@@ -869,6 +875,12 @@ cursor: pointer;
   }
 }
 @media (max-width: 600px) {
+  .yellow-reclam {
+    top: -40px;
+    left: -25px;
+    width: 112px;
+    height: 112px;
+  }
   .header {
     flex-wrap: wrap;
   }
@@ -920,4 +932,5 @@ cursor: pointer;
 .lorem__down-block1{
   display: none;
 }
+
 }
