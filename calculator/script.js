@@ -5,6 +5,25 @@ class Calculator {
     this.currentOperandTextElement = currentOperandTextElement
     this.clear()
   }
+  square(){
+    if(this.currentOperand === '')return
+    if(this.previousOperand !== ''){
+      this.compute()
+    }
+    
+   
+    const a=Number.parseInt(this.currentOperand) ** 0.5
+    if(a.toString().length > 10){
+    this.currentOperand=  +Math.round(a).toString().slice(0,10)
+    }else{
+      this.currentOperand=a
+    }
+  }
+  minus(){
+    if(this.currentOperand){
+      this.currentOperand *= -1
+    }
+  }
   clear() {
     this.currentOperand = ''
     this.previousOperand = ''
@@ -13,7 +32,7 @@ class Calculator {
     errorField.style.display='none'
   }
   displayError(){
-    errorField.innerText='invalid operation'
+    errorField.innerText='Error'
     errorField.style.display='block'
   setTimeout(()=>{
     errorField.innerText=''
@@ -28,7 +47,12 @@ class Calculator {
     this.currentOperand = (this.currentOperand?.toString() || '') + number.toString()
   }
   chooseOperation(operation) {
-    if (this.currentOperand === '') return
+    if (this.currentOperand === '' && this.previousOperand === '') return
+    if(this.currentOperand === '' && this.previousOperand !== ''){
+            this.previousOperand =Number.parseFloat(this.previousOperand)+operation
+           this.operation = operation
+           return
+          }
     if (this.previousOperand !== '') {
       this.compute()
     }
@@ -74,6 +98,9 @@ class Calculator {
       default:
         return
     }
+    if(computation.toString().length >10){
+      computation=+Math.round(computation).toString().slice(0,10)
+    }
     this.currentOperand = computation
     this.operation = undefined
     this.previousOperand = ''
@@ -116,11 +143,20 @@ const operationButtons = document.querySelectorAll('[data-operation]')
 const equalsButton = document.querySelector('[data-equals]')
 const deleteButton = document.querySelector('[data-delete]')
 const allClearButton = document.querySelector('[data-all-clear]')
+const squareButton = document.querySelector('[data-square]')
 const previousOperandTextElement = document.querySelector('[data-previous-operand]')
 const currentOperandTextElement = document.querySelector('[data-current-operand]')
+const minus = document.querySelector('[data-minus]')
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
-
+minus.addEventListener('click',()=>{
+calculator.minus()
+ calculator.updateDisplay()
+})
+squareButton.addEventListener('click',()=>{
+  calculator.square()
+ calculator.updateDisplay()
+})
 numberButtons.forEach(button => {
   button.addEventListener('click', () => {
     calculator.appendNumber(button.innerText)
