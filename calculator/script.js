@@ -7,6 +7,10 @@ class Calculator {
   }
   square(){
     if(this.currentOperand === '')return
+    if(Number.parseInt(this.currentOperand) <=0){
+      this.displayError()
+      return
+    }
     if(this.previousOperand !== ''){
       this.compute()
     }
@@ -14,7 +18,7 @@ class Calculator {
    
     const a=Number.parseInt(this.currentOperand) ** 0.5
     if(a.toString().length > 10){
-    this.currentOperand=  +Math.round(a).toString().slice(0,10)
+    this.currentOperand=  a.toPrecision(10)
     }else{
       this.currentOperand=a
     }
@@ -99,7 +103,8 @@ class Calculator {
         return
     }
     if(computation.toString().length >10){
-      computation=+Math.round(computation).toString().slice(0,10)
+      // computation=+Math.round(computation).toString().slice(0,10)
+          computation=computation.toPrecision(10)
     }
     this.currentOperand = computation
     this.operation = undefined
