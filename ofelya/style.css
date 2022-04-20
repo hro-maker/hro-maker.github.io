@@ -13,17 +13,17 @@
   height: 100vh;
   background: url(./assets/5.jpeg) center center/cover no-repeat;
   animation: fade 5s infinite;
-  font-size: 23px;
+  font-size: 15px;
   color: #fff;
   padding: 30px;
 }
 .text {
-  margin-top: 70px;
+  margin-top: 30vh;
 }
 img {
   position: fixed;
   top: 10px;
-  right: 10px;
+  right: 30%;
 }
 @keyframes fade {
   0% {
