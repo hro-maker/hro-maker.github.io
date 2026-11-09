@@ -1,185 +1,2394 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,100;1,300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="cv">
-      <div class="cv__container">
-        <div class="cv__header">
-          <h1><a href="#">Hrant Muradyan</a></h1>
-        </div>
-        <div class="cv__body">
-          <div class="cv__body-myinfo">
-            <div class="cv__body-information">
-              <table>
-                <thead>
-                  <tr>
-                    <th>contact</th>
-                    <th>value</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Phone:</td>
-                    <td><a href="tel:+995574700230">+995-574700230</a></td>
-                  </tr>
-                  <tr>
-                    <td>email:</td>
-                    <td>
-                      <a href="mailto:hrant.muradyan.1998@mail.ru"
-                        >hrantmuradyan137@gmail.com
-                      </a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="cv__body-image"></div>
-          </div>
-          <div class="cv__aboutMe">
-            <div class="block__title">Skills</div>
-            <div class="grid__container">
-              <div class="grid__item">
-                <div class="grid__item-title">Front-end</div>
-                <ul class="grid__item-body">
-                  <li>HTML5/CSS3/SASS/SCCS,</li>
-                  <li>Javascript ES6+,</li>
-                  <li>Angular,</li>
-                  <li>React/Next/Redux,</li>
-                  <li>Socket,</li>
-                  <li>Graphql</li>
-                  <li>Typescript</li>
-                </ul>
-              </div>
-              <div class="grid__item">
-                <div class="grid__item-title">Back-end</div>
-                <ul class="grid__item-body">
-                  <li>Node.js,</li>
-                  <li>Express,</li>
-                  <li>Nest</li>
-                  <li>.Net core</li>
-                </ul>
-              </div>
-              <div class="grid__item">
-                <div class="grid__item-title">Experience</div>
-                <ul class="grid__item-body">
-                  <li>Epam Systems middle software engineer,</li>
-                  <li>Fair Content Media</li>
-                </ul>
-              </div>
-              <div class="grid__item">
-                <div class="grid__item-title">Education</div>
-                <ul class="grid__item-body">
-                  <li>
-                    <a target="_blank" href="https://sjuni.edu.ge/">__SJSU__ </a
-                    ><br />
-                    information technology web development
-                  </li>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hrant Muradyan | Senior Full Stack Developer</title>
 
-                  <li><a href="https://beonmax.com/">beonmax</a></li>
-                </ul>
-              </div>
-              <div class="grid__item">
-                <div class="grid__item-title">Languages</div>
-                <ul class="grid__item-body">
-                  <li>English: B1</li>
-                  <li>Armenian: native speaker</li>
-                  <li>Georgian: B2</li>
-                  <li>Russian: B2</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="block__title">certificates</div>
-          <div class="cv__certificates">
-            <a
-              target="_blanc"
-              href="https://beonmax.com/certificates/07ae4f89cac49d248dde4c5a349d9bec/ru/"
-            >
-              <div class="certificate__labels">template designer</div>
-              <img
-                src="./images/Без названия (1)_page-0001.jpg"
-                id="designer"
-                name="designer"
-                width="150px"
-                height="150px"
-                alt="web"
-              />
-            </a>
+<style>
+:root {
+    --bg: #060913;
+    --card: rgba(13, 22, 38, 0.72);
+    --card-border: rgba(255, 255, 255, 0.08);
+    --primary: #38bdf8;
+    --secondary: #818cf8;
+    --accent: #c084fc;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+}
 
-            <a
-              target="_blanc"
-              href="https://beonmax.com/certificates/b1ee48df687393a9c56961d7dea28b0a/ru/"
-            >
-              <div class="certificate__labels">React course</div>
-              <img
-                src="./images/react(2)_page-0001.jpg"
-                id="react"
-                name="react"
-                width="150px"
-                height="150px"
-                alt="react"
-              />
-            </a>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-            <a
-              target="_blanc"
-              href="https://beonmax.com/certificates/3685c621b6ae1eec0634696e25bcc48a/ru/"
-            >
-              <div class="certificate__labels">Javascript course</div>
-              <img
-                src="./images/Без названия_page-0001.jpg"
-                id="js"
-                name="js"
-                width="150px"
-                height="150px"
-                alt="js"
-              />
-            </a>
-          </div>
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'DejaVu Sans', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+/* ================================================= */
+/* 🌌 MULTI-LAYER CINEMATIC PARALLAX BACKGROUND      */
+/* ================================================= */
+
+.parallax-container {
+    position: fixed;
+    inset: 0;
+    z-index: -3;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+#spaceCanvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.cursor-spotlight {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: radial-gradient(
+        800px circle at var(--mouse-screen-x, 50%) var(--mouse-screen-y, 50%),
+        rgba(56, 189, 248, 0.07),
+        transparent 70%
+    );
+    will-change: background;
+}
+
+.parallax-grid {
+    position: absolute;
+    inset: -25%;
+    background-image: 
+        linear-gradient(to right, rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(circle at 50% 45%, black 25%, transparent 85%);
+    -webkit-mask-image: radial-gradient(circle at 50% 45%, black 25%, transparent 85%);
+    z-index: 3;
+    will-change: transform;
+}
+
+.parallax-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -4;
+    background:
+        radial-gradient(circle at 20% 15%, rgba(20, 50, 100, 0.5) 0, transparent 45%),
+        radial-gradient(circle at 85% 75%, rgba(65, 30, 115, 0.45) 0, transparent 45%),
+        var(--bg);
+    will-change: transform;
+}
+
+.orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.38;
+    z-index: -2;
+    pointer-events: none;
+    will-change: transform;
+    mix-blend-mode: screen;
+}
+
+.orb.one {
+    width: 440px;
+    height: 440px;
+    background: linear-gradient(135deg, #0284c7, #38bdf8);
+    top: 5%;
+    left: -100px;
+}
+
+.orb.two {
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    right: -120px;
+    top: 45%;
+}
+
+.orb.three {
+    width: 380px;
+    height: 380px;
+    background: linear-gradient(135deg, #06b6d4, #6366f1);
+    left: 20%;
+    bottom: -80px;
+}
+
+.ambient-glyphs {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.glyph {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.05);
+    user-select: none;
+    will-change: transform;
+    transition: color 0.3s;
+}
+
+.glyph.g1 { top: 22%; left: 8%; font-size: 75px; color: rgba(56, 189, 248, 0.06); }
+.glyph.g2 { top: 48%; right: 9%; font-size: 65px; color: rgba(168, 85, 247, 0.06); }
+.glyph.g3 { top: 72%; left: 14%; font-size: 85px; color: rgba(56, 189, 248, 0.05); }
+.glyph.g4 { top: 88%; right: 18%; font-size: 60px; color: rgba(236, 72, 153, 0.05); }
+.glyph.g5 { top: 12%; right: 28%; font-size: 50px; color: rgba(56, 189, 248, 0.04); }
+
+/* NAVIGATION & LANGUAGE SWITCHER */
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 16px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(6, 9, 19, 0.82);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--card-border);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+nav .links a {
+    color: var(--muted);
+    text-decoration: none;
+    margin-right: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav .links a:hover {
+    color: var(--primary);
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--card-border);
+    border-radius: 30px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 5px 11px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.lang-btn:hover {
+    color: #fff;
+}
+
+.lang-btn.active {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: #060913;
+    box-shadow: 0 0 12px rgba(56, 189, 248, 0.4);
+}
+
+/* HERO SECTION */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 130px 12% 80px;
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 16px;
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    border-radius: 30px;
+    color: var(--primary);
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-bottom: 25px;
+    background: rgba(56, 189, 248, 0.08);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+}
+
+.tag::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--primary);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 82px);
+    line-height: 1.08;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.gradient-text {
+    background: linear-gradient(120deg, #38bdf8 15%, #a855f7 50%, #ec4899 90%);
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 16.5px;
+    line-height: 1.8;
+    max-width: 630px;
+    margin-top: 25px;
+}
+
+.hero-floating-pills {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.float-pill {
+    position: absolute;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    will-change: transform;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.float-pill.p1 {
+    top: 20%;
+    right: 12%;
+    border-color: rgba(56, 189, 248, 0.4);
+    color: #38bdf8;
+    animation: floatAnim 6s ease-in-out infinite alternate;
+}
+
+.float-pill.p2 {
+    bottom: 25%;
+    right: 22%;
+    border-color: rgba(168, 85, 247, 0.4);
+    color: #c084fc;
+    animation: floatAnim 7s ease-in-out infinite alternate-reverse;
+}
+
+.float-pill.p3 {
+    top: 55%;
+    right: 6%;
+    border-color: rgba(14, 165, 233, 0.4);
+    color: #7dd3fc;
+    animation: floatAnim 8s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnim {
+    0% { transform: translateY(0px) rotate(0deg); }
+    100% { transform: translateY(-16px) rotate(1.5deg); }
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 13px 26px;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0284c7, #6366f1);
+    color: white;
+    border: none;
+    box-shadow: 0 10px 25px rgba(2, 132, 199, 0.3);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: white;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+}
+
+.btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(56, 189, 248, 0.3);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 35px;
+    left: 12%;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: pulseScroll 2s infinite ease-in-out;
+}
+
+@keyframes pulseScroll {
+    0%, 100% { opacity: 0.5; transform: translateY(0); }
+    50% { opacity: 1; transform: translateY(4px); }
+}
+
+/* MAIN LAYOUT */
+
+.container {
+    width: 86%;
+    max-width: 1280px;
+    margin: auto;
+    padding: 60px 0 100px;
+    display: grid;
+    grid-template-columns: 310px 1fr;
+    gap: 40px;
+    align-items: start;
+    position: relative;
+    z-index: 2;
+}
+
+/* SIDEBAR & PHOTO */
+
+.sidebar {
+    position: sticky;
+    top: 90px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 28px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 96px;
+    height: 96px;
+    margin-bottom: 20px;
+    border-radius: 24px;
+    padding: 3px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+    cursor: pointer;
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.avatar-wrapper:hover {
+    transform: scale(1.08) rotate(1deg);
+    box-shadow: 0 15px 40px rgba(56, 189, 248, 0.55);
+}
+
+.avatar-zoom-hint {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(6, 9, 19, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 11px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.avatar-wrapper:hover .avatar-zoom-hint {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 21px;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    background: #0b1325;
+}
+
+.avatar-status {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    background: #10b981;
+    border-radius: 50%;
+    border: 3px solid var(--bg);
+    box-shadow: 0 0 10px #10b981;
+}
+
+.sidebar h3 {
+    font-size: 21px;
+    letter-spacing: -0.5px;
+}
+
+.sidebar .role {
+    color: var(--primary);
+    font-size: 13px;
+    margin-top: 5px;
+    font-weight: 600;
+}
+
+.sidebar hr {
+    border: none;
+    border-top: 1px solid var(--card-border);
+    margin: 20px 0;
+}
+
+.contact-item {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 15px;
+    overflow-wrap: anywhere;
+}
+
+.contact-item strong {
+    display: block;
+    color: white;
+    margin-bottom: 3px;
+    font-size: 11px;
+    letter-spacing: 0.8px;
+}
+
+.sidebar a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+/* Language Proficiency Showcase */
+.lang-proficiency-section {
+    margin-top: 15px;
+}
+
+.lang-proficiency-title {
+    font-size: 11px;
+    letter-spacing: 1.2px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lang-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.lang-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 12.5px;
+    margin-bottom: 6px;
+}
+
+.lang-name {
+    color: #fff;
+    font-weight: 600;
+}
+
+.lang-badge {
+    font-size: 10px;
+    padding: 2px 7px;
+    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.12);
+    color: var(--primary);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    font-weight: 600;
+}
+
+.lang-bar {
+    width: 100%;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.lang-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(56, 189, 248, 0.6);
+}
+
+/* CONTENT SECTIONS */
+
+.section {
+    position: relative;
+    margin-bottom: 35px;
+    padding: 36px;
+    background: var(--card);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    opacity: 0;
+    transform: translateY(45px) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.section-title {
+    font-size: 22px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    letter-spacing: -0.5px;
+}
+
+.section-title::before {
+    content: "";
+    width: 4px;
+    height: 26px;
+    border-radius: 8px;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    box-shadow: 0 0 12px var(--primary);
+}
+
+.summary {
+    color: var(--muted);
+    line-height: 1.85;
+    font-size: 14.5px;
+}
+
+/* SKILLS & PROJECTS GRID */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.skill-box, .project, .cert-card {
+    position: relative;
+    padding: 22px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--card-border);
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+}
+
+.skill-box::after, .project::after, .cert-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(
+        400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(56, 189, 248, 0.12),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.skill-box:hover::after, .project:hover::after, .cert-card:hover::after {
+    opacity: 1;
+}
+
+.skill-box:hover, .project:hover, .cert-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+.skill-box h4 {
+    color: var(--primary);
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.skill-box p {
+    font-size: 12.5px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* TIMELINE */
+
+.timeline-wrapper {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-bar-bg {
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    bottom: 10px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.timeline-bar-fill {
+    position: absolute;
+    left: 4px;
+    top: 5px;
+    width: 2px;
+    height: 0%;
+    background: linear-gradient(180deg, var(--primary), var(--secondary));
+    box-shadow: 0 0 12px var(--primary);
+    transition: height 0.1s linear;
+}
+
+.job {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.job:last-child {
+    margin-bottom: 0;
+}
+
+.job-bullet {
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--primary);
+    box-shadow: 0 0 10px var(--primary);
+    transition: transform 0.3s ease, background 0.3s;
+}
+
+.job:hover .job-bullet {
+    transform: scale(1.3);
+    background: var(--primary);
+}
+
+.job h3 {
+    font-size: 17px;
+    letter-spacing: -0.3px;
+}
+
+.company {
+    color: var(--primary);
+    font-size: 13px;
+    margin: 5px 0;
+    font-weight: 600;
+}
+
+.date {
+    color: #64748b;
+    font-size: 11.5px;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.job ul {
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.job li {
+    margin-bottom: 6px;
+}
+
+/* PROJECTS */
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project:last-child {
+    margin-bottom: 0;
+}
+
+.project h3 {
+    color: var(--primary);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.project p {
+    color: var(--muted);
+    font-size: 13.5px;
+    line-height: 1.8;
+}
+
+/* ================================================= */
+/* 🎓 CERTIFICATIONS SECTION                         */
+/* ================================================= */
+
+.cert-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 26px;
+}
+
+.cert-info {
+    min-width: 0;
+}
+
+.cert-badge-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.cert-issuer {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.cert-verified {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 12px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.cert-title {
+    font-size: 15.5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.cert-meta {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.cert-btn {
+    padding: 9px 18px;
+    border-radius: 9px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    background: rgba(56, 189, 248, 0.08);
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.cert-btn:hover {
+    background: var(--primary);
+    color: #060913;
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ================================================= */
+/* 🖼️ 3D PARALLAX PHOTO LIGHTBOX MODAL               */
+/* ================================================= */
+
+.photo-modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    perspective: 1200px;
+    transform: scale(0.9) translateY(30px);
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.modal-overlay.active .photo-modal-card {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
+.photo-3d-stage {
+    position: relative;
+    width: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    background: #090e1c;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8), 0 0 50px rgba(56, 189, 248, 0.25);
+    transform-style: preserve-3d;
+    will-change: transform;
+    transition: transform 0.15s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.photo-modal-img {
+    width: 100%;
+    max-height: 560px;
+    display: block;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 25px;
+    pointer-events: none;
+    transform: scale(1.02);
+}
+
+.photo-glare {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(
+        500px circle at var(--photo-glare-x, 50%) var(--photo-glare-y, 50%),
+        rgba(255, 255, 255, 0.22),
+        transparent 65%
+    );
+    mix-blend-mode: overlay;
+    opacity: 0.85;
+}
+
+.photo-depth-badge {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    right: 22px;
+    padding: 14px 18px;
+    border-radius: 16px;
+    background: rgba(6, 9, 19, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transform: translateZ(35px);
+    pointer-events: none;
+}
+
+.photo-badge-indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #10b981;
+    box-shadow: 0 0 10px #10b981;
+    flex-shrink: 0;
+}
+
+/* ================================================= */
+/* 💬 CONTACT MODAL                                  */
+/* ================================================= */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(3, 7, 18, 0.78);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s ease;
+    perspective: 1200px;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    position: relative;
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(135deg, rgba(16, 27, 47, 0.95), rgba(9, 15, 29, 0.92));
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 22px;
+    padding: 36px 32px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 189, 248, 0.15);
+    backdrop-filter: blur(25px);
+    transform: rotateX(15deg) translateY(35px) scale(0.92);
+    opacity: 0;
+    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: rotateX(0deg) translateY(0) scale(1);
+    opacity: 1;
+}
+
+.modal-close {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--muted);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    z-index: 10;
+}
+
+.modal-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.modal-header {
+    margin-bottom: 25px;
+}
+
+.modal-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.modal-header h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+.modal-header p {
+    color: var(--muted);
+    font-size: 13.5px;
+    margin-top: 6px;
+    line-height: 1.5;
+}
+
+.modal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+.modal-overlay.active .modal-item:nth-child(1) { opacity: 1; transform: translateY(0); transition-delay: 0.1s; }
+.modal-overlay.active .modal-item:nth-child(2) { opacity: 1; transform: translateY(0); transition-delay: 0.18s; }
+.modal-overlay.active .modal-item:nth-child(3) { opacity: 1; transform: translateY(0); transition-delay: 0.26s; }
+
+.modal-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(56, 189, 248, 0.3);
+    transform: translateX(4px);
+}
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.item-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: var(--primary);
+    flex-shrink: 0;
+}
+
+.item-details {
+    min-width: 0;
+}
+
+.item-label {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.item-val {
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+}
+
+.item-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.action-btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: inherit;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.action-btn:hover {
+    background: var(--primary);
+    color: #060913;
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.35);
+}
+
+.action-btn.copy-btn.copied {
+    background: #10b981;
+    color: white;
+    border-color: #10b981;
+}
+
+footer {
+    text-align: center;
+    padding: 40px;
+    color: var(--muted);
+    font-size: 12px;
+    border-top: 1px solid var(--card-border);
+    position: relative;
+    z-index: 2;
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 950px) {
+    .container {
+        grid-template-columns: 1fr;
+        padding-top: 30px;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav .links {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 8% 80px;
+    }
+
+    .hero-floating-pills, .ambient-glyphs {
+        display: none;
+    }
+}
+
+@media(max-width: 600px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 24px;
+    }
+
+    .modal-card {
+        padding: 28px 20px;
+    }
+
+    .photo-modal-card {
+        max-width: 90vw;
+    }
+
+    .cert-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+
+    .item-val {
+        max-width: 130px;
+    }
+    
+    .lang-btn {
+        padding: 4px 8px;
+        font-size: 10.5px;
+    }
+}
+
+/* PRINT STYLES */
+
+@media print {
+    body {
+        background: white !important;
+        color: #1e293b !important;
+    }
+
+    nav, .parallax-container, .orb, .hero-buttons,
+    .scroll-indicator, .hero-floating-pills, .modal-overlay,
+    .lang-switcher, .ambient-glyphs, .avatar-zoom-hint {
+        display: none !important;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 20px 0;
+    }
+
+    .hero h1, .sidebar h3, .job h3, .section-title {
+        color: #0f172a !important;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sidebar, .section, .skill-box, .project, .cert-card {
+        background: white !important;
+        color: #334155 !important;
+        border: 1px solid #e2e8f0 !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+        backdrop-filter: none !important;
+        break-inside: avoid;
+    }
+
+    .summary, .job ul, .project p, .skill-box p, .contact-item {
+        color: #475569 !important;
+    }
+
+    .timeline-bar-bg, .timeline-bar-fill {
+        background: #cbd5e1 !important;
+    }
+
+    .job-bullet {
+        border-color: #0284c7 !important;
+        background: #0284c7 !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- 🌌 PARALLAX BACKGROUND STACK                       -->
+<!-- ================================================= -->
+<div class="parallax-container">
+    <canvas id="spaceCanvas"></canvas>
+    <div class="cursor-spotlight" id="cursorSpotlight"></div>
+    <div class="parallax-grid" id="parallaxGrid"></div>
+</div>
+<div class="parallax-bg" id="parallaxBg"></div>
+
+<div class="orb one" id="orb1"></div>
+<div class="orb two" id="orb2"></div>
+<div class="orb three" id="orb3"></div>
+
+<div class="ambient-glyphs">
+    <div class="glyph g1" data-depth="0.16">&lt;/&gt;</div>
+    <div class="glyph g2" data-depth="0.25">{ }</div>
+    <div class="glyph g3" data-depth="0.10">λ</div>
+    <div class="glyph g4" data-depth="0.18">async</div>
+    <div class="glyph g5" data-depth="0.08">01</div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-left">
+        <div class="logo">HM.</div>
+        <div class="links">
+            <a href="#about" data-i18n="nav_about">About</a>
+            <a href="#skills" data-i18n="nav_skills">Skills</a>
+            <a href="#experience" data-i18n="nav_experience">Experience</a>
+            <a href="#projects" data-i18n="nav_projects">Projects</a>
+            <a href="#certificates" data-i18n="nav_certificates">Certificates</a>
         </div>
-        <div class="cv__footer">
-          <a target="_blanc" href="https://github.com/hro-maker">
-            <img
-              src="./images/free-icon-github-sign-25657.svg"
-              width="40px"
-              height="40px"
-              alt="facebook"
-            />
-          </a>
-          <a target="_blanc" href="https://www.facebook.com/hrant.muratyan">
-            <img
-              src="./images/free-icon-facebook-1051309.svg"
-              width="40px"
-              height="40px"
-              alt="facebook"
-            />
-          </a>
-          <a target="_blanc" href="https://www.instagram.com/hrant.muradyan_/">
-            <img
-              src="./images/free-icon-instagram-1400829.svg"
-              width="40px"
-              height="40px"
-              alt="facebook"
-            />
-          </a>
-        </div>
-      </div>
     </div>
-  </body>
+
+    <!-- 4-LANGUAGE TOGGLE -->
+    <div class="lang-switcher">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="ru">RU</button>
+        <button class="lang-btn" data-lang="ka">ქარ</button>
+        <button class="lang-btn" data-lang="hy">ՀԱՅ</button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="heroSection">
+    <div class="hero-floating-pills">
+        <div class="float-pill p1" data-depth="0.08">
+            <span>⚡</span> Angular & .NET Core
+        </div>
+        <div class="float-pill p2" data-depth="0.14">
+            <span>🛡️</span> Keycloak & OAuth 2.0
+        </div>
+        <div class="float-pill p3" data-depth="0.05">
+            <span>🗄️</span> High-Perf SQL Server
+        </div>
+    </div>
+
+    <div class="hero-content" id="heroContent">
+        <span class="tag" data-i18n="hero_tag">AVAILABLE FOR REMOTE OPPORTUNITIES</span>
+
+        <h1>
+            <span data-i18n="hero_title_1">Senior Full Stack</span><br>
+            <span class="gradient-text" data-i18n="hero_title_2">Developer.</span>
+        </h1>
+
+        <p data-i18n="hero_desc">
+            Architecting scalable enterprise applications, robust microservices,
+            and high-performance web systems using Angular, .NET Core, C#, and SQL Server.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#experience" class="btn btn-primary" data-i18n="btn_explore">
+                Explore Experience
+            </a>
+
+            <button class="btn btn-outline" id="openContactModal" data-i18n="btn_contact">
+                Contact Me
+            </button>
+
+            <button class="btn btn-outline" onclick="window.print()" data-i18n="btn_export">
+                Export PDF
+            </button>
+        </div>
+    </div>
+
+    <div class="scroll-indicator" data-i18n="scroll_hint">
+        EXPLORE EXPERIENCE ↓
+    </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebarCard">
+        <div class="avatar-wrapper" id="openPhotoModal" title="Click to view photo in 3D">
+            <img src="./my.jpg" alt="Hrant Muradyan" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='none';">
+            <div class="avatar-zoom-hint">🔍</div>
+            <div class="avatar-status" title="Available for hire"></div>
+        </div>
+
+        <h3>Hrant Muradyan</h3>
+        <div class="role" data-i18n="sidebar_role">Senior Full Stack Developer</div>
+
+        <hr>
+
+        <div class="contact-item">
+            <strong data-i18n="sidebar_loc_label">LOCATION</strong>
+            <span data-i18n="sidebar_loc_val">Georgia</span>
+        </div>
+
+        <div class="contact-item">
+            <strong>EMAIL</strong>
+            hrantmuradyan137@gmail.com
+        </div>
+
+        <div class="contact-item">
+            <strong data-i18n="sidebar_phone_label">PHONE</strong>
+           +995574700230
+        </div>
+
+        <div class="contact-item">
+            <strong>LINKEDIN</strong>
+            <a href="https://www.linkedin.com/in/hrant-muradyan-1a6428204/" target="_blank" rel="noopener">
+                LinkedIn Profile
+            </a>
+        </div>
+
+        <div class="contact-item">
+            <strong>GITHUB</strong>
+            <a href="https://github.com/hro-maker" target="_blank" rel="noopener">
+                github.com/hro-maker
+            </a>
+        </div>
+
+        <hr>
+
+        <div class="contact-item">
+            <strong data-i18n="sidebar_pref_label">WORK PREFERENCE</strong>
+            <span data-i18n="sidebar_pref_val">Remote / Full Time</span>
+        </div>
+
+        <hr>
+
+        <!-- LANGUAGE PROFICIENCY SHOWCASE -->
+        <div class="lang-proficiency-section">
+            <div class="lang-proficiency-title" data-i18n="lang_title">
+                🌐 Languages Proficiency
+            </div>
+
+            <div class="lang-list">
+                <div class="lang-item">
+                    <div class="lang-item-header">
+                        <span class="lang-name" data-i18n="lang_en">English</span>
+                        <span class="lang-badge" data-i18n="lang_en_level">Professional (C1/C2)</span>
+                    </div>
+                    <div class="lang-bar"><div class="lang-bar-fill" style="width: 95%;"></div></div>
+                </div>
+
+                <div class="lang-item">
+                    <div class="lang-item-header">
+                        <span class="lang-name" data-i18n="lang_ka">Georgian</span>
+                        <span class="lang-badge" data-i18n="lang_native">Native / Bilingual</span>
+                    </div>
+                    <div class="lang-bar"><div class="lang-bar-fill" style="width: 100%;"></div></div>
+                </div>
+
+                <div class="lang-item">
+                    <div class="lang-item-header">
+                        <span class="lang-name" data-i18n="lang_hy">Armenian</span>
+                        <span class="lang-badge" data-i18n="lang_native">Native / Bilingual</span>
+                    </div>
+                    <div class="lang-bar"><div class="lang-bar-fill" style="width: 100%;"></div></div>
+                </div>
+
+                <div class="lang-item">
+                    <div class="lang-item-header">
+                        <span class="lang-name" data-i18n="lang_ru">Russian</span>
+                        <span class="lang-badge" data-i18n="lang_fluent">Fluent / Professional</span>
+                    </div>
+                    <div class="lang-bar"><div class="lang-bar-fill" style="width: 95%;"></div></div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <h2 class="section-title" data-i18n="about_title">About Me</h2>
+
+            <p class="summary" data-i18n="about_p1">
+                Senior Full Stack Developer experienced in building enterprise-level applications using Angular, .NET Core, C#, and SQL Server.
+            </p>
+            <br>
+            <p class="summary" data-i18n="about_p2">
+                Specialized in advanced frontend development, backend architecture, microservices, REST APIs, database engineering, and authentication systems. Experienced in delivering complete, resilient solutions from user interfaces to complex database transactions with a focus on speed, scale, and clean maintainable code.
+            </p>
+        </section>
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+            <h2 class="section-title" data-i18n="skills_title">Technical Expertise</h2>
+
+            <div class="skills-grid">
+
+                <div class="skill-box">
+                    <h4 data-i18n="skill_fe">Frontend Development</h4>
+                    <p>
+                        Angular, TypeScript, JavaScript, RxJS,
+                        React, Redux, Material UI, HTML5, CSS3
+                    </p>
+                </div>
+
+                <div class="skill-box">
+                    <h4 data-i18n="skill_be">Backend Development</h4>
+                    <p>
+                        C#, .NET Core, ASP.NET Core,
+                        Web API, REST APIs, Microservices,
+                        Entity Framework Core
+                    </p>
+                </div>
+
+                <div class="skill-box">
+                    <h4 data-i18n="skill_db">Database Engineering</h4>
+                    <p>
+                        SQL Server, T-SQL, Stored Procedures,
+                        Functions, Triggers, Query Optimization
+                    </p>
+                </div>
+
+                <div class="skill-box">
+                    <h4 data-i18n="skill_sec">Authentication & Security</h4>
+                    <p>
+                        Keycloak, OAuth 2.0, OpenID Connect,
+                        JWT, Role-Based Access Control (RBAC)
+                    </p>
+                </div>
+
+                <div class="skill-box">
+                    <h4 data-i18n="skill_arch">Architecture & Patterns</h4>
+                    <p>
+                        Microservices, Clean Architecture, Domain-Driven Design (DDD),
+                        SOLID, Design Patterns, Clean Code
+                    </p>
+                </div>
+
+                <div class="skill-box">
+                    <h4 data-i18n="skill_tools">Tools & DevOps</h4>
+                    <p>
+                        Git, GitHub, Docker, Azure DevOps,
+                        Visual Studio, VS Code, Postman, Swagger
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <h2 class="section-title" data-i18n="exp_title">Professional Experience</h2>
+
+            <div class="timeline-wrapper" id="timeline">
+                <div class="timeline-bar-bg"></div>
+                <div class="timeline-bar-fill" id="timelineFill"></div>
+
+                <div class="job">
+                    <div class="job-bullet"></div>
+                    <h3 data-i18n="job1_role">Senior Full Stack Developer</h3>
+                    <div class="company">Swiftness — Mislaka</div>
+                    <div class="date" data-i18n="job1_date">[START DATE] — PRESENT</div>
+
+                    <ul data-i18n="job1_bullets">
+                        <li>Develop enterprise applications using Angular, TypeScript, and .NET Core.</li>
+                        <li>Design and implement backend APIs, microservices, and business logic.</li>
+                        <li>Develop advanced SQL Server stored procedures, functions, and triggers.</li>
+                        <li>Handle end-to-end development, from frontend components to SQL operations.</li>
+                        <li>Integrate Keycloak authentication, OAuth 2.0, OpenID Connect, and JWT.</li>
+                        <li>Maintain and improve existing enterprise applications.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-bullet"></div>
+                    <h3 data-i18n="job2_role">Full Stack Developer</h3>
+                    <div class="company">EPAM Systems</div>
+                    <div class="date">2018 — 2021</div>
+
+                    <ul data-i18n="job2_bullets">
+                        <li>Developed and maintained web applications.</li>
+                        <li>Implemented backend services and frontend application features.</li>
+                        <li>Integrated APIs and database operations.</li>
+                        <li>Worked within enterprise development workflows and cross-functional teams.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-bullet"></div>
+                    <h3 data-i18n="job3_role">Junior Frontend Developer</h3>
+                    <div class="company">GeoAlpha Solutions</div>
+                    <div class="date">2021 — 2022</div>
+
+                    <ul data-i18n="job3_bullets">
+                        <li>Developed frontend applications using React, Redux, and Material UI.</li>
+                        <li>Built reusable UI components and responsive interfaces.</li>
+                        <li>Integrated REST APIs and managed application state.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <h2 class="section-title" data-i18n="proj_title">Selected Projects</h2>
+
+            <div class="project">
+                <h3 data-i18n="proj1_title">Enterprise Pension Management Platform</h3>
+                <p data-i18n="proj1_desc">
+                    Enterprise-level platform development involving Angular, .NET Core, SQL Server, 
+                    Keycloak, authentication, microservices, and complex business workflows.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3 data-i18n="proj2_title">Technical Interview Platform</h3>
+                <p data-i18n="proj2_desc">
+                    Full-stack platform built with React, .NET Core, SQL Server, REST APIs, and payment integrations. 
+                    Includes candidate management, interview workflows, billing, and administration.
+                </p>
+            </div>
+
+        </section>
+
+        <!-- ================================================= -->
+        <!-- 🎓 CERTIFICATIONS SECTION                         -->
+        <!-- ================================================= -->
+        <section class="section" id="certificates">
+            <h2 class="section-title" data-i18n="cert_title">Certifications & Credentials</h2>
+
+            <div class="cert-grid">
+                <!-- Certificate 1 -->
+                <div class="cert-card">
+                    <div class="cert-info">
+                        <div class="cert-badge-row">
+                            <span class="cert-issuer">beONmax Academy</span>
+                            <span class="cert-verified">✓ <span data-i18n="cert_verified">Verified</span></span>
+                        </div>
+                        <h3 class="cert-title" data-i18n="cert1_name">Professional Web Development & Engineering</h3>
+                        <div class="cert-meta">Credential ID: 3685c621b6ae1eec0634696e25bcc48a</div>
+                    </div>
+                    <a href="https://beonmax.com/certificates/3685c621b6ae1eec0634696e25bcc48a/ru/" target="_blank" rel="noopener" class="cert-btn" data-i18n="cert_verify_btn">
+                        Verify ↗
+                    </a>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="cert-card">
+                    <div class="cert-info">
+                        <div class="cert-badge-row">
+                            <span class="cert-issuer">beONmax Academy</span>
+                            <span class="cert-verified">✓ <span data-i18n="cert_verified">Verified</span></span>
+                        </div>
+                        <h3 class="cert-title" data-i18n="cert2_name">Advanced JavaScript & Modern Web Applications</h3>
+                        <div class="cert-meta">Credential ID: 07ae4f89cac49d248dde4c5a349d9bec</div>
+                    </div>
+                    <a href="https://beonmax.com/certificates/07ae4f89cac49d248dde4c5a349d9bec/ru/" target="_blank" rel="noopener" class="cert-btn" data-i18n="cert_verify_btn">
+                        Verify ↗
+                    </a>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="cert-card">
+                    <div class="cert-info">
+                        <div class="cert-badge-row">
+                            <span class="cert-issuer">beONmax Academy</span>
+                            <span class="cert-verified">✓ <span data-i18n="cert_verified">Verified</span></span>
+                        </div>
+                        <h3 class="cert-title" data-i18n="cert3_name">Frontend Architecture, Responsive Layouts & Tools</h3>
+                        <div class="cert-meta">Credential ID: b1ee48df687393a9c56961d7dea28b0a</div>
+                    </div>
+                    <a href="https://beonmax.com/certificates/b1ee48df687393a9c56961d7dea28b0a/ru/" target="_blank" rel="noopener" class="cert-btn" data-i18n="cert_verify_btn">
+                        Verify ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+            <h2 class="section-title" data-i18n="edu_title">Education</h2>
+            <h3 style="font-size: 16px; margin-bottom: 6px;">SAMTSKHE-JAVAKHETI STATE UNIVERSITY</h3>
+            <p class="summary" data-i18n="edu_desc">
+                Software engineer — 2022 y.
+            </p>
+        </section>
+
+    </main>
+</div>
+
+<!-- 🖼️ 3D PARALLAX PHOTO LIGHTBOX MODAL -->
+<div class="modal-overlay" id="photoModal" aria-hidden="true">
+    <div class="photo-modal-card">
+        <button class="modal-close" id="closePhotoModal" aria-label="Close photo dialog">&times;</button>
+        
+        <div class="photo-3d-stage" id="photoStage">
+            <img src="./my.jpg" alt="Hrant Muradyan" class="photo-modal-img">
+            <div class="photo-glare" id="photoGlare"></div>
+            
+            <div class="photo-depth-badge">
+                <div class="photo-badge-indicator"></div>
+                <div>
+                    <h4 style="font-size: 14px; font-weight: 700; color: #fff;">Hrant Muradyan</h4>
+                    <span style="font-size: 12px; color: var(--primary);" data-i18n="sidebar_role">Senior Full Stack Developer</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 💬 CONTACT MODAL -->
+<div class="modal-overlay" id="contactModal" aria-hidden="true">
+    <div class="modal-card">
+        <button class="modal-close" id="closeContactModal" aria-label="Close dialog">&times;</button>
+        
+        <div class="modal-header">
+            <span class="modal-tag" data-i18n="modal_tag">DIRECT CONNECTION</span>
+            <h3 data-i18n="modal_title">Let's Get in Touch</h3>
+            <p data-i18n="modal_desc">Reach out directly for remote roles, architectural consultations, or collaboration.</p>
+        </div>
+
+        <div class="modal-list">
+            <div class="modal-item">
+                <div class="item-left">
+                    <div class="item-icon">✉️</div>
+                    <div class="item-details">
+                        <span class="item-label">Email</span>
+                        <span class="item-val">hrantmuradyan137@gmail.com</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="action-btn copy-btn" onclick="copyContact('hrantmuradyan137@gmail.com', this)" data-i18n="btn_copy">Copy</button>
+                    <a href="mailto:hrantmuradyan137@gmail.com" class="action-btn" data-i18n="btn_send">Send ↗</a>
+                </div>
+            </div>
+
+            <div class="modal-item">
+                <div class="item-left">
+                    <div class="item-icon">📞</div>
+                    <div class="item-details">
+                        <span class="item-label" data-i18n="sidebar_phone_label">Phone</span>
+                        <span class="item-val">+995574700230</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <button class="action-btn copy-btn" onclick="copyContact('+995574700230', this)" data-i18n="btn_copy">Copy</button>
+                    <a href="tel:+995574700230" class="action-btn" data-i18n="btn_call">Call ↗</a>
+                </div>
+            </div>
+
+            <div class="modal-item">
+                <div class="item-left">
+                    <div class="item-icon">💼</div>
+                    <div class="item-details">
+                        <span class="item-label">LinkedIn</span>
+                        <span class="item-val">in/Hrant Muradyan</span>
+                    </div>
+                </div>
+                <div class="item-actions">
+                    <a href="https://www.linkedin.com/in/hrant-muradyan-1a6428204/" target="_blank" rel="noopener" class="action-btn" data-i18n="btn_connect">
+                        Connect ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    © 2026 Hrant Muradyan | Senior Full Stack Developer
+</footer>
+
+<script>
+// --- I18N MULTILINGUAL DICTIONARY ---
+const translations = {
+    en: {
+        nav_about: "About",
+        nav_skills: "Skills",
+        nav_experience: "Experience",
+        nav_projects: "Projects",
+        nav_certificates: "Certificates",
+        hero_tag: "AVAILABLE FOR REMOTE OPPORTUNITIES",
+        hero_title_1: "Senior Full Stack",
+        hero_title_2: "Developer.",
+        hero_desc: "Architecting scalable enterprise applications, robust microservices, and high-performance web systems using Angular, .NET Core, C#, and SQL Server.",
+        btn_explore: "Explore Experience",
+        btn_contact: "Contact Me",
+        btn_export: "Export PDF",
+        scroll_hint: "EXPLORE EXPERIENCE ↓",
+        sidebar_role: "Senior Full Stack Developer",
+        sidebar_loc_label: "LOCATION",
+        sidebar_loc_val: "Georgia",
+        sidebar_phone_label: "PHONE",
+        sidebar_pref_label: "WORK PREFERENCE",
+        sidebar_pref_val: "Remote / Full Time",
+        lang_title: "🌐 Languages Proficiency",
+        lang_en: "English",
+        lang_en_level: "Professional (C1/C2)",
+        lang_ka: "Georgian",
+        lang_hy: "Armenian",
+        lang_ru: "Russian",
+        lang_native: "Native / Bilingual",
+        lang_fluent: "Fluent / Professional",
+        about_title: "About Me",
+        about_p1: "Senior Full Stack Developer experienced in building enterprise-level applications using Angular, .NET Core, C#, and SQL Server.",
+        about_p2: "Specialized in advanced frontend development, backend architecture, microservices, REST APIs, database engineering, and authentication systems. Experienced in delivering complete, resilient solutions from user interfaces to complex database transactions with a focus on speed, scale, and clean maintainable code.",
+        skills_title: "Technical Expertise",
+        skill_fe: "Frontend Development",
+        skill_be: "Backend Development",
+        skill_db: "Database Engineering",
+        skill_sec: "Authentication & Security",
+        skill_arch: "Architecture & Patterns",
+        skill_tools: "Tools & DevOps",
+        exp_title: "Professional Experience",
+        job1_role: "Senior Full Stack Developer",
+        job1_date: "2022 — PRESENT",
+        job2_role: "Full Stack Developer",
+        job3_role: "Junior Frontend Developer",
+        proj_title: "Selected Projects",
+        proj1_title: "Enterprise Pension Management Platform",
+        proj1_desc: "Enterprise-level platform development involving Angular, .NET Core, SQL Server, Keycloak, authentication, microservices, and complex business workflows.",
+        proj2_title: "Technical Interview Platform",
+        proj2_desc: "Full-stack platform built with React, .NET Core, SQL Server, REST APIs, and payment integrations. Includes candidate management, interview workflows, billing, and administration.",
+        cert_title: "Certifications & Credentials",
+        cert_verified: "Verified",
+        cert_verify_btn: "Verify ↗",
+        cert1_name: "Professional Web Development & Engineering",
+        cert2_name: "Advanced JavaScript & Modern Web Applications",
+        cert3_name: "Frontend Architecture, Responsive Layouts & Tools",
+        edu_title: "Education",
+        edu_desc: "Software engineer — 2022 y.",
+        modal_tag: "DIRECT CONNECTION",
+        modal_title: "Let's Get in Touch",
+        modal_desc: "Reach out directly for remote roles, architectural consultations, or collaboration.",
+        btn_copy: "Copy",
+        btn_copied: "✓ Copied",
+        btn_send: "Send ↗",
+        btn_call: "Call ↗",
+        btn_connect: "Connect ↗"
+    },
+    ru: {
+        nav_about: "Обо мне",
+        nav_skills: "Навыки",
+        nav_experience: "Опыт",
+        nav_projects: "Проекты",
+        nav_certificates: "Сертификаты",
+        hero_tag: "ДОСТУПЕН ДЛЯ УДАЛЕННОЙ РАБОТЫ",
+        hero_title_1: "Senior Full Stack",
+        hero_title_2: "Разработчик.",
+        hero_desc: "Проектирование масштабируемых корпоративных платформ, надежных микросервисов и высоконагруженных веб-систем на Angular, .NET Core, C# и SQL Server.",
+        btn_explore: "Посмотреть опыт",
+        btn_contact: "Связаться со мной",
+        btn_export: "Скачать PDF",
+        scroll_hint: "ЛИСТАЙТЕ ВНИЗ ↓",
+        sidebar_role: "Senior Full Stack Разработчик",
+        sidebar_loc_label: "ЛОКАЦИЯ",
+        sidebar_loc_val: "Грузия",
+        sidebar_phone_label: "ТЕЛЕФОН",
+        sidebar_pref_label: "ФОРМАТ РАБОТЫ",
+        sidebar_pref_val: "Удаленно / Полный день",
+        lang_title: "🌐 Владение языками",
+        lang_en: "Английский",
+        lang_en_level: "Профессиональный (C1/C2)",
+        lang_ka: "Грузинский",
+        lang_hy: "Армянский",
+        lang_ru: "Русский",
+        lang_native: "Родной / Двуязычный",
+        lang_fluent: "Свободный / Профессиональный",
+        about_title: "Обо мне",
+        about_p1: "Senior Full Stack разработчик с солидным опытом создания корпоративных систем на стеке Angular, .NET Core, C# и SQL Server.",
+        about_p2: "Специализируюсь на продвинутой фронтенд-архитектуре, микросервисах, REST API, глубокой оптимизации баз данных и системах авторизации. Создаю комплексные решения: от реактивных пользовательских интерфейсов до сложных транзакций в БД.",
+        skills_title: "Технические навыки",
+        skill_fe: "Фронтенд разработка",
+        skill_be: "Бэкенд архитектура",
+        skill_db: "Инженерия баз данных",
+        skill_sec: "Безопасность и авторизация",
+        skill_arch: "Архитектура и паттерны",
+        skill_tools: "Инструменты и DevOps",
+        exp_title: "Опыт работы",
+        job1_role: "Senior Full Stack Разработчик",
+        job1_date: "[ДАТА НАЧАЛА] — ПО НАСТ. ВРЕМЯ",
+        job2_role: "Full Stack Разработчик",
+        job3_role: "Junior Frontend Разработчик",
+        proj_title: "Избранные проекты",
+        proj1_title: "Корпоративная платформа пенсионного фонда",
+        proj1_desc: "Разработка enterprise-платформы на Angular, .NET Core, SQL Server, Keycloak, микросервисной архитектуре и сложных финансовых процессах.",
+        proj2_title: "Платформа технических собеседований",
+        proj2_desc: "Full-stack веб-сервис на React, .NET Core, SQL Server, REST API и платежных шлюзах. Включает личные кабинеты, биллинг и аналитику.",
+        cert_title: "Сертификаты и квалификация",
+        cert_verified: "Подтвержден",
+        cert_verify_btn: "Проверить ↗",
+        cert1_name: "Профессиональная веб-разработка и инженерия",
+        cert2_name: "Продвинутый JavaScript и современные веб-приложения",
+        cert3_name: "Архитектура Frontend, адаптивная верстка и инструментарий",
+        edu_title: "Образование",
+        edu_desc: "Software engineer — 2022 Г.",
+        modal_tag: "ПРЯМАЯ СВЯЗЬ",
+        modal_title: "Давайте обсудим проект",
+        modal_desc: "Открыт для предложений по удаленной работе, архитектурных консультаций и сотрудничества.",
+        btn_copy: "Копировать",
+        btn_copied: "✓ Скопировано",
+        btn_send: "Написать ↗",
+        btn_call: "Позвонить ↗",
+        btn_connect: "Профиль ↗"
+    },
+    ka: {
+        nav_about: "ჩემ შესახებ",
+        nav_skills: "უნარები",
+        nav_experience: "გამოცდილება",
+        nav_projects: "პროექტები",
+        nav_certificates: "სერტიფიკატები",
+        hero_tag: "ღია ვარ დისტანციური შემოთავაზებებისთვის",
+        hero_title_1: "Senior Full Stack",
+        hero_title_2: "დეველოპერი.",
+        hero_desc: "მასშტაბირებადი enterprise აპლიკაციების, მძლავრი მიკროსერვისებისა და თანამედროვე სისტემების შექმნა Angular, .NET Core, C# და SQL Server-ის გამოყენებით.",
+        btn_explore: "გამოცდილების ნახვა",
+        btn_contact: "დამიკავშირდით",
+        btn_export: "PDF ექსპორტი",
+        scroll_hint: "გადასვლა ქვემოთ ↓",
+        sidebar_role: "Senior Full Stack დეველოპერი",
+        sidebar_loc_label: "ადგილმდებარეობა",
+        sidebar_loc_val: "საქართველო",
+        sidebar_phone_label: "ტელეფონი",
+        sidebar_pref_label: "სამუშაო ფორმატი",
+        sidebar_pref_val: "დისტანციური / სრული",
+        lang_title: "🌐 ენების ცოდნა",
+        lang_en: "ინგლისური",
+        lang_en_level: "პროფესიული (C1/C2)",
+        lang_ka: "ქართული",
+        lang_hy: "სომხური",
+        lang_ru: "რუსული",
+        lang_native: "მშობლიური",
+        lang_fluent: "თავისუფალი / C1",
+        about_title: "ჩემ შესახებ",
+        about_p1: "Senior Full Stack დეველოპერი enterprise დონის აპლიკაციების შექმნის მრავალწლიანი გამოცდილებით (Angular, .NET Core, C#, SQL Server).",
+        about_p2: "სპეციალიზებული ვარ თანამედროვე Frontend არქიტექტურაში, მიკროსერვისებში, REST API-ში, მონაცემთა ბაზების ოპტიმიზაციასა და ავთენტიფიკაციის სისტემებში.",
+        skills_title: "ტექნიკური უნარები",
+        skill_fe: "Frontend დეველოპმენტი",
+        skill_be: "Backend დეველოპმენტი",
+        skill_db: "მონაცემთა ბაზები",
+        skill_sec: "ავთენტიფიკაცია და უსაფრთხოება",
+        skill_arch: "არქიტექტურა და პატერნები",
+        skill_tools: "ინსტრუმენტები & DevOps",
+        exp_title: "სამუშაო გამოცდილება",
+        job1_role: "Senior Full Stack დეველოპერი",
+        job1_date: "[დაწყების თარიღი] — დღემდე",
+        job2_role: "Full Stack დეველოპერი",
+        job3_role: "Junior Frontend დეველოპერი",
+        proj_title: "რჩეული პროექტები",
+        proj1_title: "საპენსიო მართვის კორპორატიული პლატფორმა",
+        proj1_desc: "Enterprise სისტემის შექმნა: Angular, .NET Core, SQL Server, Keycloak, ავთენტიფიკაცია და კომპლექსური ფინანსური ლოგიკა.",
+        proj2_title: "ტექნიკური გასაუბრებების პლატფორმა",
+        proj2_desc: "Full-stack პროექტი: React, .NET Core, SQL Server, REST API და გადახდის სისტემების ინტეგრაცია.",
+        cert_title: "სერტიფიკატები და კვალიფიკაცია",
+        cert_verified: "დამოწმებული",
+        cert_verify_btn: "შემოწმება ↗",
+        cert1_name: "პროფესიონალური ვებ-დეველოპმენტი და ინჟინერია",
+        cert2_name: "Advanced JavaScript და თანამედროვე ვებ-აპლიკაციები",
+        cert3_name: "Frontend არქიტექტურა, ადაპტური დიზაინი და ხელსაწყოები",
+        edu_title: "განათლება",
+        edu_desc: "Software engineer — 2022 წ.",
+        modal_tag: "პირდაპირი კონტაქტი",
+        modal_title: "დამიკავშირდით",
+        modal_desc: "მზად ვარ განვიხილო დისტანციური ვაკანსიები, არქიტექტურული კონსულტაციები და პროექტები.",
+        btn_copy: "კოპირება",
+        btn_copied: "✓ შენახულია",
+        btn_send: "გაგზავნა ↗",
+        btn_call: "დარეკვა ↗",
+        btn_connect: "პროფილი ↗"
+    },
+    hy: {
+        nav_about: "Իմ մասին",
+        nav_skills: "Հմտություններ",
+        nav_experience: "Փորձ",
+        nav_projects: "Նախագծեր",
+        nav_certificates: "Սերտիֆիկատներ",
+        hero_tag: "ՀԱՍԱՆԵԼԻ Է ՀԵՌԱՎԱՐ ԱՇԽԱՏԱՆՔԻ ՀԱՄԱՐ",
+        hero_title_1: "Senior Full Stack",
+        hero_title_2: "Ծրագրավորող.",
+        hero_desc: "Մասշտաբային enterprise համակարգերի, հուսալի միկրոսերվիսների և արագագործ վեբ հավելվածների ստեղծում Angular, .NET Core, C# և SQL Server տեխնոլոգիաներով:",
+        btn_explore: "Դիտել աշխատանքային փորձը",
+        btn_contact: "Կապ հաստատել",
+        btn_export: "Ներբեռնել PDF",
+        scroll_hint: "ԻՋՆԵԼ ՆԵՐՔԵՎ ↓",
+        sidebar_role: "Senior Full Stack Ծրագրավորող",
+        sidebar_loc_label: "ՏԵՂԱԴՐՈՒԹՅՈՒՆ",
+        sidebar_loc_val: "Վրաստան",
+        sidebar_phone_label: "ՀԵՌԱԽՈՍ",
+        sidebar_pref_label: "ՖՈՐՄԱՏ",
+        sidebar_pref_val: "Հեռավար / Full Time",
+        lang_title: "🌐 Լեզուների իմացություն",
+        lang_en: "Անգլերեն",
+        lang_en_level: "Մասնագիտական (C1/C2)",
+        lang_ka: "Վրացերեն",
+        lang_hy: "Հայերեն",
+        lang_ru: "Ռուսերեն",
+        lang_native: "Մայրենի / Գերազանց",
+        lang_fluent: "Ազատ / Մասնագիտական",
+        about_title: "Իմ մասին",
+        about_p1: "Senior Full Stack ծրագրավորող enterprise մակարդակի համակարգերի մշակման հարուստ փորձով (Angular, .NET Core, C#, SQL Server):",
+        about_p2: "Մասնագիտացված եմ ժամանակակից frontend ճարտարապետության, backend միկրոսերվիսների, REST API-ների, տվյալների բազաների խորը օպտիմալացման և նույնականացման համակարգերում:",
+        skills_title: "Տեխնիկական հմտություններ",
+        skill_fe: "Frontend ծրագրավորում",
+        skill_be: "Backend ճարտարապետություն",
+        skill_db: "Տվյալների բազաների ինժեներիա",
+        skill_sec: "Անվտանգություն և Keycloak",
+        skill_arch: "Ճարտարապետություն & SOLID",
+        skill_tools: "Գործիքներ & DevOps",
+        exp_title: "Աշխատանքային փորձ",
+        job1_role: "Senior Full Stack Ծրագրավորող",
+        job1_date: "[ՍԿԻԶԲ] — ՄԻՆՉ ՕՐՍ",
+        job2_role: "Full Stack Ծրագրավորող",
+        job3_role: "Junior Frontend Ծրագրավորող",
+        proj_title: "Ընտրված նախագծեր",
+        proj1_title: "Կենսաթոշակային կառավարման հարթակ",
+        proj1_desc: "Enterprise մակարդակի հարթակ՝ Angular, .NET Core, SQL Server, Keycloak, միկրոսերվիսներ և բարդ բիզնես գործընթացներ:",
+        proj2_title: "Տեխնիկական հարցազրույցների համակարգ",
+        proj2_desc: "Full-stack հարթակ՝ React, .NET Core, SQL Server, REST API-ներ և վճարային համակարգերի ինտեգրում:",
+        cert_title: "Հավաստագրեր և որակավորումներ",
+        cert_verified: "Հաստատված",
+        cert_verify_btn: "Ստուգել ↗",
+        cert1_name: "Պրոֆեսիոնալ վեբ ծրագրավորում և ինժեներիա",
+        cert2_name: "Advanced JavaScript և ժամանակակից վեբ հավելվածներ",
+        cert3_name: "Frontend ճարտարապետություն, ադապտիվ դիզայն և գործիքներ",
+        edu_title: "Կրթություն",
+        edu_desc: "Software engineer — 2022 թ.",
+        modal_tag: "ՈՒՂԻՂ ԿԱՊ",
+        modal_title: "Եկեք կապ հաստատենք",
+        modal_desc: "Բաց եմ հեռավար աշխատանքի առաջարկների, ճարտարապետական խորհրդատվության և համագործակցության համար:",
+        btn_copy: "Պատճենել",
+        btn_copied: "✓ Պատճենված է",
+        btn_send: "Գրել ↗",
+        btn_call: "Զանգահարել ↗",
+        btn_connect: "Կապվել ↗"
+    }
+};
+
+let currentLang = localStorage.getItem('resume_lang') || 'en';
+
+function applyLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem('resume_lang', lang);
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    const dict = translations[lang] || translations.en;
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+            el.textContent = dict[key];
+        }
+    });
+}
+
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        applyLanguage(btn.getAttribute('data-lang'));
+    });
+});
+
+applyLanguage(currentLang);
+
+// =======================================================
+// 🌠 3D CANVAS PARTICLE MATRIX ENGINE
+// =======================================================
+const canvas = document.getElementById('spaceCanvas');
+const ctx = canvas.getContext('2d');
+let particles = [];
+const PARTICLE_COUNT = 55;
+
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+}
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
+
+class Particle3D {
+    constructor() {
+        this.reset();
+    }
+    reset() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.z = Math.random() * 1.5 + 0.3;
+        this.vx = (Math.random() - 0.5) * 0.3 * this.z;
+        this.vy = (Math.random() - 0.5) * 0.3 * this.z;
+        this.radius = Math.random() * 1.6 * this.z + 0.6;
+        this.alpha = Math.random() * 0.6 + 0.2;
+    }
+    update(mx, my, sY) {
+        this.x += this.vx;
+        this.y += this.vy;
+
+        if (this.x < 0) this.x = canvas.width;
+        if (this.x > canvas.width) this.x = 0;
+        if (this.y < 0) this.y = canvas.height;
+        if (this.y > canvas.height) this.y = 0;
+    }
+    draw(mx, my) {
+        const offsetX = mx * 28 * this.z;
+        const offsetY = my * 28 * this.z;
+
+        ctx.beginPath();
+        ctx.arc(this.x + offsetX, this.y + offsetY, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = `rgba(56, 189, 248, ${this.alpha * 0.75})`;
+        ctx.shadowBlur = 10 * this.z;
+        ctx.shadowColor = '#38bdf8';
+        ctx.fill();
+        ctx.shadowBlur = 0;
+    }
+}
+
+for (let i = 0; i < PARTICLE_COUNT; i++) {
+    particles.push(new Particle3D());
+}
+
+function drawConnections(mx, my) {
+    for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+            const p1 = particles[i];
+            const p2 = particles[j];
+            const dx = (p1.x + mx * 28 * p1.z) - (p2.x + mx * 28 * p2.z);
+            const dy = (p1.y + my * 28 * p1.z) - (p2.y + my * 28 * p2.z);
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 110) {
+                const alpha = (1 - dist / 110) * 0.18;
+                ctx.beginPath();
+                ctx.moveTo(p1.x + mx * 28 * p1.z, p1.y + my * 28 * p1.z);
+                ctx.lineTo(p2.x + mx * 28 * p2.z, p2.y + my * 28 * p2.z);
+                ctx.strokeStyle = `rgba(129, 140, 248, ${alpha})`;
+                ctx.lineWidth = 0.8;
+                ctx.stroke();
+            }
+        }
+    }
+}
+
+// =======================================================
+// 🚀 UNIFIED PARALLAX SCROLL & GYRO ENGINE
+// =======================================================
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const hero = document.getElementById('heroContent');
+const grid = document.getElementById('parallaxGrid');
+const bg = document.getElementById('parallaxBg');
+const orb1 = document.getElementById('orb1');
+const orb2 = document.getElementById('orb2');
+const orb3 = document.getElementById('orb3');
+const floatPills = document.querySelectorAll('.float-pill');
+const glyphs = document.querySelectorAll('.glyph');
+const spotlight = document.getElementById('cursorSpotlight');
+const timeline = document.getElementById('timeline');
+const timelineFill = document.getElementById('timelineFill');
+
+let scrollY = window.scrollY;
+let mouseX = 0, mouseY = 0;
+let targetMouseX = 0, targetMouseY = 0;
+
+window.addEventListener('mousemove', (e) => {
+    const { clientX, clientY } = e;
+    const { innerWidth, innerHeight } = window;
+    
+    targetMouseX = (clientX / innerWidth) * 2 - 1;
+    targetMouseY = (clientY / innerHeight) * 2 - 1;
+
+    spotlight.style.setProperty('--mouse-screen-x', `${clientX}px`);
+    spotlight.style.setProperty('--mouse-screen-y', `${clientY}px`);
+
+    document.querySelectorAll('.skill-box, .project, .cert-card').forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const x = clientX - rect.left;
+        const y = clientY - rect.top;
+        card.style.setProperty('--mouse-x', `${x}px`);
+        card.style.setProperty('--mouse-y', `${y}px`);
+    });
+}, { passive: true });
+
+function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    if (!prefersReducedMotion) {
+        mouseX += (targetMouseX - mouseX) * 0.07;
+        mouseY += (targetMouseY - mouseY) * 0.07;
+        scrollY = window.scrollY;
+
+        particles.forEach(p => {
+            p.update(mouseX, mouseY, scrollY);
+            p.draw(mouseX, mouseY);
+        });
+        drawConnections(mouseX, mouseY);
+
+        if (scrollY < window.innerHeight) {
+            const heroOffsetY = scrollY * 0.35;
+            const heroOpacity = Math.max(0, 1 - scrollY / (window.innerHeight * 0.85));
+            const rotateX = -mouseY * 5;
+            const rotateY = mouseX * 5;
+
+            hero.style.transform = `translate3d(0, ${heroOffsetY}px, 0) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            hero.style.opacity = heroOpacity;
+
+            floatPills.forEach(pill => {
+                const depth = parseFloat(pill.getAttribute('data-depth')) || 0.1;
+                const pillX = mouseX * depth * 220;
+                const pillY = (mouseY * depth * 220) + (scrollY * depth * 0.6);
+                pill.style.transform = `translate3d(${pillX}px, ${pillY}px, 0)`;
+            });
+        }
+
+        glyphs.forEach(glyph => {
+            const depth = parseFloat(glyph.getAttribute('data-depth')) || 0.1;
+            const gX = mouseX * depth * 180;
+            const gY = (mouseY * depth * 180) - (scrollY * depth * 0.45);
+            glyph.style.transform = `translate3d(${gX}px, ${gY}px, 0) rotate(${gX * 0.05}deg)`;
+        });
+
+        grid.style.transform = `translate3d(${mouseX * 20}px, ${scrollY * 0.18 + (mouseY * 20)}px, 0)`;
+        bg.style.transform = `translate3d(0, ${scrollY * 0.08}px, 0)`;
+
+        orb1.style.transform = `translate3d(${mouseX * 50}px, ${scrollY * 0.22 + (mouseY * 35)}px, 0)`;
+        orb2.style.transform = `translate3d(${mouseX * -60}px, ${scrollY * -0.16 + (mouseY * -45)}px, 0)`;
+        orb3.style.transform = `translate3d(${mouseX * 35}px, ${scrollY * 0.09}px, 0)`;
+    }
+
+    if (timeline) {
+        const rect = timeline.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        const visibleHeight = windowHeight - rect.top;
+        const totalHeight = rect.height;
+        let progress = (visibleHeight / (totalHeight + 100)) * 100;
+        progress = Math.max(0, Math.min(100, progress));
+        timelineFill.style.height = `${progress}%`;
+    }
+
+    requestAnimationFrame(animate);
+}
+
+requestAnimationFrame(animate);
+
+// Section reveal observer
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.section').forEach(section => {
+    observer.observe(section);
+});
+
+// =======================================================
+// 🖼️ 3D PARALLAX PHOTO MODAL LOGIC
+// =======================================================
+const photoModal = document.getElementById('photoModal');
+const openPhotoModalBtn = document.getElementById('openPhotoModal');
+const closePhotoModalBtn = document.getElementById('closePhotoModal');
+const photoStage = document.getElementById('photoStage');
+const photoGlare = document.getElementById('photoGlare');
+
+function openPhotoDialog() {
+    photoModal.classList.add('active');
+    photoModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+}
+
+function closePhotoDialog() {
+    photoModal.classList.remove('active');
+    photoModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+    if (photoStage) photoStage.style.transform = 'rotateX(0deg) rotateY(0deg)';
+}
+
+openPhotoModalBtn.addEventListener('click', openPhotoDialog);
+closePhotoModalBtn.addEventListener('click', closePhotoDialog);
+
+photoModal.addEventListener('click', (e) => {
+    if (e.target === photoModal) closePhotoDialog();
+});
+
+photoModal.addEventListener('mousemove', (e) => {
+    if (!photoModal.classList.contains('active')) return;
+    const rect = photoStage.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const normX = (x / rect.width) * 2 - 1;
+    const normY = (y / rect.height) * 2 - 1;
+
+    const rotX = -normY * 16;
+    const rotY = normX * 16;
+
+    photoStage.style.transform = `rotateX(${rotX}deg) rotateY(${rotY}deg) scale(1.02)`;
+
+    photoGlare.style.setProperty('--photo-glare-x', `${x}px`);
+    photoGlare.style.setProperty('--photo-glare-y', `${y}px`);
+});
+
+photoModal.addEventListener('mouseleave', () => {
+    photoStage.style.transform = 'rotateX(0deg) rotateY(0deg) scale(1)';
+});
+
+// =======================================================
+// 💬 CONTACT MODAL LOGIC
+// =======================================================
+const modal = document.getElementById('contactModal');
+const openModalBtn = document.getElementById('openContactModal');
+const closeModalBtn = document.getElementById('closeContactModal');
+
+function openModal() {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modal-open');
+}
+
+function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modal-open');
+}
+
+openModalBtn.addEventListener('click', openModal);
+closeModalBtn.addEventListener('click', closeModal);
+
+modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+});
+
+window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (photoModal.classList.contains('active')) closePhotoDialog();
+        if (modal.classList.contains('active')) closeModal();
+    }
+});
+
+function copyContact(text, button) {
+    navigator.clipboard.writeText(text).then(() => {
+        const dict = translations[currentLang] || translations.en;
+        const originalText = button.textContent;
+        button.textContent = dict.btn_copied || "✓ Copied";
+        button.classList.add('copied');
+        setTimeout(() => {
+            button.textContent = originalText;
+            button.classList.remove('copied');
+        }, 2000);
+    }).catch(err => {
+        console.error('Copy failed: ', err);
+    });
+}
+</script>
+
+</body>
 </html>
